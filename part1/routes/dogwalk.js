@@ -33,7 +33,7 @@ router.get('/walkers/summary', async (req,res) => {
         FROM Users
 
         */
-        const [walker] = await db.execute('SELECT Users.username AS walkerUsers, COUNT(WalkRatings.)');
+        const [walker] = await db.execute('SELECT Users.username AS walkerUsers, COUNT(WalkRatings.rating_id) AS totalRatings, AVG()');
         res.status(200).json(walker);
     } catch (err) {
         res.status(500).json({ error: 'Could not show walkers summary' });
