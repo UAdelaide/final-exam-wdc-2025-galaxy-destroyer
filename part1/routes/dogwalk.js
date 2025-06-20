@@ -30,7 +30,7 @@ router.get('/walkers/summary', async (req,res) => {
         AVG(Walkratings.rating)
         now get completed walks by summing up how many 'completed''s there are
         COUNT(WHEN WalkRequests.status='completed' THEN WalkRequests.request_id END) AS totalWalks
-        
+        FROM Users
 
         */
         const [walker] = await db.execute('SELECT Users.username, WalkRatings.rating,');
