@@ -8,7 +8,7 @@ router.get('/dogs', async (req,res) => {
     try () {
         const [dogs] = await db.execute('SELECT * FROM Dogs'); // query to execute
     } catch(err) {
-        res.status(500).json({ error: 'could not display Dogs.' });
+        res.status(500).json({ error: 'Could not display Dogs :(' });
     }
 });
 
