@@ -4,7 +4,7 @@ const db = mysql.createPool({
     // socketPath: '/var/run/mysqld/mysqld.sock',
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: 'root',
     database: 'DogWalkService'
 });
 
