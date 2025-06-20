@@ -14,8 +14,8 @@
         <h1>Doggies yay</h1>
         <button type="button" @click="newDog">Get a new dawg</button>
     </div>
-    <div v-if="imageUrl">
-        <img :src="imageUrl" alt="oh no"/>
+    <div v-if="image">
+        <img :src="image" alt="oh no"/>
     </div>
 
 <script>
@@ -32,7 +32,7 @@
                 try {
                     const response = await fetch('https://dog.ceo/api/breeds/image/random');
                     const data = await response.json();
-                    this.imageUrl = data.message;
+                    this.image = data.message;
                 } catch (err) {
                     console.log('Failed to show new dog!', error);
                 }
