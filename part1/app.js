@@ -20,7 +20,7 @@ app.use('/users', usersRouter);
 app.use('/api', dogwalkRouter);
 
 app.get('/dogs', async (req,res) => {
-    try () {
+    try {
         const [dogs] = await db.execute('SELECT * FROM Dogs'); // query to execute
         res.json(dogs);
     } catch (err) {
