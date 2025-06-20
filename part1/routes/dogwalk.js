@@ -12,7 +12,9 @@ router.get('/dogs', async (req,res) => {
     }
 });
 
-router.get(''{});
+router.get('/walkrequests/open', async (req,res) => {
+
+});
 
 
 
