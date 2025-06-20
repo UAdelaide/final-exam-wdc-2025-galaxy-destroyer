@@ -4,7 +4,7 @@ var db = require('../db');
 
 // create routes for paths /dogs, /walkrequests/open, /walkers/summary
 
-router.get('/dogs', async (req,res) => {
+app.get('/dogs', async (req,res) => {
     try () {
         const [dogs] = await db.execute('SELECT * FROM Dogs'); // query to execute
         res.json(dogs);
