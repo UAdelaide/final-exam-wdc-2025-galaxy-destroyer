@@ -38,7 +38,7 @@ router.get('/walkers/summary', async (req,res) => {
             AVG(WalkRequests) AS avgRating,
             COUNT(CASE WHEN WalkRequests.status = 'completed' THEN WalkRequests.request_id END) AS completedWalks
             FROM Users
-            LEFT JOIN WalkApplications ON Users.user_id = WalkApplications.walker_id AND WalkApplications
+            LEFT JOIN WalkApplications ON Users.user_id = WalkApplications.walker_id AND WalkApplications.status = 'accepted'
             `);
         res.status(200).json(walker);
     } catch (err) {
