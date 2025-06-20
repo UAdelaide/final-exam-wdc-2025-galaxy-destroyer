@@ -26,7 +26,7 @@ router.get('/walkers/summary', async (req,res) => {
     try {
 
         const [] = await db.execute('');
-        res.json()
+        res.status.(200)json()
     } catch (err) {
 
     }
