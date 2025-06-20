@@ -14,7 +14,9 @@
         <h1>Doggies yay</h1>
         <button type="button" @click="newDog">Get a new dawg</button>
     </div>
-    <div></div>
+    <div v-if="imageUrl">
+        <img :src>
+    </div>
 
 <script>
     const { createApp } = Vue;
