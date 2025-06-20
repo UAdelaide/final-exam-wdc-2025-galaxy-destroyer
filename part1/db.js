@@ -9,8 +9,10 @@ const db = mysql.createPool({
 });
 
 // a way to ensure database is connected to express
-if (db.getConnection()) {
-    
+db.getConnection() {
+    try {
+        
+    }
 }
 
 module.exports = db;
