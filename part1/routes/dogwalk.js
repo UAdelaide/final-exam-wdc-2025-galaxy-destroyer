@@ -22,7 +22,13 @@ router.get('/walkrequests/open', async (req,res) => {
     }
 });
 
-router.get('/walkers/summary');
+router.get('/walkers/summary', async (req,res) => {
+    try {
+
+    } catch (err) {
+
+    }
+});
 
 
 
