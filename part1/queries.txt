@@ -13,4 +13,4 @@ INSERT INTO Users (username,email,password_hash,role)
 VALUES ('joshbhai1','joshua@icloud.com','balls0','owner');
 
 INSERT INTO Users (username,email,password_hash,role)
-VALUES ('garipoo','','ilovebiology1014','owner');
+VALUES ('garipoo','email@email.com','ilovebiology1014','walker');
