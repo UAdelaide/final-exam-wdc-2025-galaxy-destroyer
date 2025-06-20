@@ -18,13 +18,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api', dogwalkRouter);
-app.get('/dogs', async (req,res) => {
-    try () {
-        const [dogs] = await db.execute('SELECT * FROM Dogs'); // query to execute
-        res.json(dogs);
-    } catch(err) {
-        res.status(500).json({ error: 'Could not display Dogs :(' });
-    }
-});
 
 module.exports = app;
