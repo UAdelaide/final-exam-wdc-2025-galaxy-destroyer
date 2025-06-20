@@ -6,9 +6,9 @@ var db = require('../db');
 
 router.get('/dogs', async (req,res) => {
     try () {
-        const [dogs] = await db.execute(''); // query to execute
+        const [dogs] = await db.execute('SELECT * FROM Dogs'); // query to execute
     } catch(err) {
-        res.status(500).json({ error: 'could not fetch data' });
+        res.status(500).json({ error: 'could not display Dogs.' });
     }
 });
 
