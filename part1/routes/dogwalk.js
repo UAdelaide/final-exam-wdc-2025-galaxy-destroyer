@@ -8,7 +8,7 @@ router.get('/dogs', async (req,res) => {
     try () {
 
     } catch(err) {
-        
+        res.status(500).json('could not fetch data');
     }
 });
 
