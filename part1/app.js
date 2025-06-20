@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-// app.use('/api', dogwalkRouter);
+app.use('/api', dogwalkRouter);
 
 app.get('/dogs', async (req,res) => {
     try {
