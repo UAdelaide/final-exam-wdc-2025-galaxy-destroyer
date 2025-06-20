@@ -25,7 +25,7 @@ router.get('/walkrequests/open', async (req,res) => {
 router.get('/walkers/summary', async (req,res) => {
     try {
 
-        const [walker] = await db.execute('SELECT Users.username, ');
+        const [walker] = await db.execute('SELECT Users.username, WalkRatings.rating,');
         res.status(200).json(walker);
     } catch (err) {
         res.status(500).json({ error: 'Could not show walkers summary' });
