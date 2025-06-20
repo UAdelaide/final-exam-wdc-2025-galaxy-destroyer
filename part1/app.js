@@ -5,7 +5,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var dogwalkRouter = require('.routes/dogwalk');
+// var dogwalkRouter = require('.routes/dogwalk');
 
 var app = express();
 
@@ -17,8 +17,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+// app.use('/api', dogwalkRouter);
 
-app.get('/api/dogs', async (req,res) => {
+app.get('/dogs', async (req,res) => {
     try {
         const [dogs] = await db.execute('SELECT * FROM Dogs'); // query to execute
         res.json(dogs);
