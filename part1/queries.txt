@@ -19,5 +19,5 @@ VALUES ('garipoo','email@email.com','ilovebiology1014','walker');
 
 INSERT INTO Dogs (ownerID,name,size)
 VALUES (1,'Max','medium'),
-(3,'Bella','small'),
+(3,'Bella','small');
 
