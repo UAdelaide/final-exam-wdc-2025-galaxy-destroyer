@@ -23,4 +23,4 @@ VALUES (1,'Max','medium'),
 
 INSERT INTO Dogs (owner_id,name,size)
 VALUES (4,'Rambo','large'),
-;
+(5,'Bibble','small');
