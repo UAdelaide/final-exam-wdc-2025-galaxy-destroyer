@@ -8,7 +8,7 @@ router.get('/dogs', async (req,res) => {
         const [dogs] = await db.execute('SELECT Dogs.name, Dogs.size, Users.username FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id'); // query to execute
         res.json(dogs); // send as json
     } catch (err) {
-        res.status(500).json({ error: 'Could not display Dogs :(' }); // if 
+        res.status(500).json({ error: 'Could not display Dogs :(' }); // what shows if data cant load from sql
     }
 });
 
