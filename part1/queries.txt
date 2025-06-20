@@ -28,4 +28,4 @@ VALUES (4,'Rambo','large'),
 
 --------------------------------------------------------------
 
-INSERT INTO WalkRequests (dog_id,requested_time,duration_minutes,location,)
+INSERT INTO WalkRequests (dog_id,requested_time,duration_minutes,location,status)
