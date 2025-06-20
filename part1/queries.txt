@@ -21,3 +21,5 @@ INSERT INTO Dogs (owner_id,name,size)
 VALUES (1,'Max','medium'),
 (3,'Bella','small');
 
+
+INSERT INTO Dogs (owner_id,name,size)
