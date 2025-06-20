@@ -33,7 +33,7 @@ router.get('/walkers/summary', async (req,res) => {
         FROM Users
         ONLY USE relavant people (walkers), using Users.role = 'walker'
         */
-        const [walker] = await db.execute(`SELECT Users.username AS walkerUsers,
+        const [walker] = await db.execute(`SELECT Users.username AS walkerUser,
             COUNT(WalkRatings.rating_id) AS totalRatings,
             AVG(WalkRatings.rating) AS avgRating,
             COUNT(CASE WHEN WalkRequests.status = 'completed' THEN WalkRequests.request_id END) AS completedWalks
