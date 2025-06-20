@@ -24,7 +24,7 @@ router.get('/walkrequests/open', async (req,res) => {
 
 router.get('/walkers/summary', async (req,res) => {
     try {
-        // to formulate this query, we first select all the walkers
+        // to formulate this query, we get the usernames using Users.username
         const [walker] = await db.execute('SELECT Users.username, WalkRatings.rating,');
         res.status(200).json(walker);
     } catch (err) {
