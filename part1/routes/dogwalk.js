@@ -14,8 +14,8 @@ router.get('/dogs', async (req,res) => {
 
 router.get('/walkrequests/open', async (req,res) => {
     try {
-        
-        const [reqs] = await db.execute('SELECT WalkRequets.request_id, Dogs.name, WalkRequets.');
+        var longAssQuery = 'SELECT WalkRequets.request_id, Dogs.name, WalkRequets';
+        const [reqs] = await db.execute('SELECT WalkRequets.request_id, Dogs.name FROM WalkRequests');
         res.json(reqs);
     } catch (err) {
         res.status(500).json({ error: Could not show walk requests });
