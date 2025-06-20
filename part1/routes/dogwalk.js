@@ -14,7 +14,8 @@ router.get('/dogs', async (req,res) => {
 
 router.get('/walkrequests/open', async (req,res) => {
     try {
-        const [reqs] = await db.execute('SELECT WalkRequets.request_id, Dogs.name, ');
+        
+        const [reqs] = await db.execute('SELECT WalkRequets.request_id, Dogs.name, WalkRequets.');
         res.json(reqs);
     } catch (err) {
         res.status(500).json({ error: Could not show walk requests });
