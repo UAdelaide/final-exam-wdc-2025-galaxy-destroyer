@@ -28,8 +28,8 @@ router.get('/walkers/summary', async (req,res) => {
         then we find the total ratings and get the average of all the ratings using COUNT THEN AVG:
         COUNT (WalkRequests rating_id) AS totalRatings
         AVG(rating)
-
-        
+        now get completed walks by summing up how many 'completed''s there are
+        COUNT(WHEN )
 
         */
         const [walker] = await db.execute('SELECT Users.username, WalkRatings.rating,');
