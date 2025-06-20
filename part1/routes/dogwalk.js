@@ -17,7 +17,7 @@ router.get('/walkrequests/open', async (req,res) => {
         const [reqs] = await db.execute('');
         res.json(reqs);
     } catch (err) {
-
+        res.status(500).json({ error: });
     }
 });
 
