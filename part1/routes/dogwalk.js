@@ -6,9 +6,9 @@ var db = require('../db');
 router.get('/dogs', async (req,res) => {
     try {
         const [dogs] = await db.execute('SELECT Dogs.name, Dogs.size, Users.username FROM Dogs JOIN Users ON Dogs.owner_id = Users.user_id'); // query to execute
-        res.json(dogs);
+        res.json(dogs); // send as json
     } catch (err) {
-        res.status(500).json({ error: 'Could not display Dogs :(' });
+        res.status(500).json({ error: 'Could not display Dogs :(' }); // if 
     }
 });
 
