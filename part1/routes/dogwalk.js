@@ -25,6 +25,8 @@ router.get('/walkrequests/open', async (req,res) => {
 router.get('/walkers/summary', async (req,res) => {
     try {
 
+        const [] = await db.execute('');
+        res.json()
     } catch (err) {
 
     }
