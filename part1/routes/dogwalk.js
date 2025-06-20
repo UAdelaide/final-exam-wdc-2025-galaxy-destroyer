@@ -35,7 +35,7 @@ router.get('/walkers/summary', async (req,res) => {
         */
         const [walker] = await db.execute(`SELECT Users.username AS walkerUsers,
             COUNT(WalkRatings.rating_id) AS totalRatings,
-            AVG(WalkRequests.) AS avgRating,
+            AVG(WalkRequests.rating) AS avgRating,
             COUNT(CASE WHEN WalkRequests.status = 'completed' THEN WalkRequests.request_id END) AS completedWalks
             FROM Users
             LEFT JOIN WalkApplications ON Users.user_id = WalkApplications.walker_id AND WalkApplications.status = 'accepted'
