@@ -4,13 +4,5 @@ var db = require('../db');
 
 // create routes for paths /dogs, /walkrequests/open, /walkers/summary
 
-app.get('/dogs', async (req,res) => {
-    try () {
-        const [dogs] = await db.execute('SELECT * FROM Dogs'); // query to execute
-        res.json(dogs);
-    } catch(err) {
-        res.status(500).json({ error: 'Could not display Dogs :(' });
-    }
-});
 
 module.exports = router;
