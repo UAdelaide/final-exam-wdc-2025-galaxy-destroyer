@@ -31,7 +31,7 @@ router.get('/walkers/summary', async (req,res) => {
         now get completed walks by summing up how many 'completed''s there are
         COUNT(WHEN WalkRequests.status='completed' THEN WalkRequests.request_id END) AS totalWalks
         FROM Users
-
+        ONLY USE relavant people (walkers), using Users.role = 'walker'
         */
         const [walker] = await db.execute(`SELECT Users.username AS walkerUsers,
             COUNT(WalkRatings.rating_id) AS totalRatings,
