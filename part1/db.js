@@ -8,4 +8,6 @@ const db = mysql.createPool({
     database: 'DogWalkService'
 });
 
+// a way to ensure database is connected to express
+db.getConnection() {}
 module.exports = db;
