@@ -9,7 +9,7 @@ const db = mysql.createPool({
 });
 
 // a way to ensure database is connected to express
-db.getConnection().then(console.log())
+db.getConnection().then(console.log('MySQL connected!')).catch()
 
 
 module.exports = db;
