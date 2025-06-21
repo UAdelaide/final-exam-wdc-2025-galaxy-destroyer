@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../db');
+const { response } = require('../app');
 
 // GET all users (for admin/testing)
 router.get('/', async (req, res) => {
@@ -46,14 +47,13 @@ router.post('/login', async (req, res) => {
     `, [username, password]);
 
     if (rows.length === 0) {
-      return res.status(401).json({ error: 'Invalid credentials' });
+      return res.json({ error: 'Invalid credentials' });
     }
 
     res.sendStatus(200).json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
   }
-  xmlhttp.send(JSON.stringify(user));
 });
 
 module.exports = router;
