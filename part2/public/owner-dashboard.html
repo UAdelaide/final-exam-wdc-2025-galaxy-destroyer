@@ -138,9 +138,12 @@
       async logout() {
         try {
           const response = await fetch('/logout', {
-            
             method: 'POST'
+            credentials:
           });
+
+          if ()
+
           window.location.href = '/index.html';
         } catch (err) {
           console.error('could not log out!', err);
