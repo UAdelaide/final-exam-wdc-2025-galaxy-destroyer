@@ -10,5 +10,5 @@ a {
 #doggie img {
   width: 300px;
   border-radius: 10px;
-  position: relative;
+  float: right;
 }
