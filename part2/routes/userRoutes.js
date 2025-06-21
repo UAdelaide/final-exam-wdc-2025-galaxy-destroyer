@@ -79,8 +79,9 @@ router.post('/login', async (req, res) => {
 router.post('/logout', async (req,res) => {
   req.session.destroy( err => {
   res.clearCookie('connect.sid');
+  res.status(200);
   if (err) {
-    return res.
+    return res.status(500);
   }
   }); // ends session
   // connect sid is the default session cookie from express-session
