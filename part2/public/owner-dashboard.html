@@ -156,14 +156,6 @@
           } catch (err) {
             console.error('could not log out!', err);
           }
-        },
-        async loadDogs() {
-          try {
-            const response = await fetch('/dawgs', { credentials:'include' }); // keep session cookie info
-            dogs.value = await response.json();
-          } catch (err) {
-            console.error('Failed to retrieve dogs',err);
-          }
         }
       }
     }).mount('#app');
