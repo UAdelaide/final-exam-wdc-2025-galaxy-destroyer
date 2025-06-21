@@ -3,7 +3,7 @@ const path = require('path');
 require('dotenv').config();
 const session = require('express-session');
 const db = require('./db');
-
+const cors = require('cors');
 
 const app = express();
 
@@ -17,6 +17,10 @@ app.use(session({
     secure:false,
     saveUninitialized: true
 }));
+
+app.use({
+    
+})
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
