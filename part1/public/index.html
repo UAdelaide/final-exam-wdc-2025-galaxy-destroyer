@@ -47,6 +47,7 @@
             try {
                 const response = await alert('HAHAH dont worry about it!!!');
                 const data = await response.json();
+                this.dw = data.message;
             } catch (err) {
                 console.log('oops',error);
             }
