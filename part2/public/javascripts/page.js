@@ -197,7 +197,7 @@ function login(){
         if (this.readyState == 4 && this.status == 200) {
             const response = JSON.parse(this.responseText);
             if (role === 'owner') {
-                location.href = 'owner-response.html'
+                location.href = 'owner-dashboard.html';
             }
 
             alert("Welcome "+this.responseText);
