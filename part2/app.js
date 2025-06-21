@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 const session = require('express-session');
-const db = require('../db');
+const db = require('/db');
 
 const app = express();
 
