@@ -18,9 +18,9 @@ app.use(session({
     saveUninitialized: true
 }));
 
-app.use({
-    
-})
+app.use(cors({
+    origin: ''
+}));
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
