@@ -183,28 +183,28 @@ function downvote(index) {
 function login(){
 
     let user = {
-        username: document.getElementById('username').value,
+        user: document.getElementById('username').value,
         password: document.getElementById('password').value
     };
 
     // Create AJAX Request
-    const xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POST", "api/users/login", true);
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("POST", "/users/login", true);
     xmlhttp.setRequestHeader("Content-type", "application/json");
 
     // Define function to run on response
     xmlhttp.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
+        if (this.readyState == 4 && this.status == 200) {
             const response = JSON.parse(this.responseText);
-            const role = response.user.role;
             if (role === 'owner') {
                 window.location.href = 'owner-dashboard.html';
             } else if (role === 'walker') {
                 window.location.href = 'walker-dashboard.html';
             } else {
-                alert('Error with user.');
+                alert()
             }
-            // alert("Welcome "+this.responseText);
+
+            alert("Welcome "+this.responseText);
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
