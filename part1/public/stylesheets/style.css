@@ -22,7 +22,8 @@ a {
 
 #dawg {
   color:darkolivegreen;
-  float:right;
+  position:absolute;
+  margin: 1rem;
 }
 
 #summonDog {
