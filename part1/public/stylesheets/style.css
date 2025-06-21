@@ -9,7 +9,7 @@ a {
 }
 
 #doggie img {
-  width: 300px;
+  width: 350px;
   border-radius: 5px;
   float: right;
 }
@@ -32,6 +32,6 @@ a {
 }
 
 #car {
-  width:20px; height: 20px;
+  width:100px; height: 100px;
   gap:1rem;
 }
