@@ -197,8 +197,8 @@ function login(){
         if (this.readyState == 4 && this.status == 200) {
             const response = JSON.parse(this.responseText);
             if (role === 'owner') {
-                location.href = 'owner-dashboard.html';
-            }
+                window.location.href = 'owner-dashboard.html';
+            } else if (role === '')
 
             alert("Welcome "+this.responseText);
         } else if (this.readyState == 4 && this.status >= 400) {
