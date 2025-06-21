@@ -52,16 +52,13 @@ router.post('/login', async (req, res) => {
     const user = rows[0];
 
     // save the sesion
-
     req.session.user =  {
       user_id: user.user_id,
       username: user.username,
       email: user.email,
       password: user.password,
       user: user.role
-    }; // storing session
-
-    // res.json({ message: 'Login successful', user: rows[0] });
+    };
 
     // response object for the front end
     res.json({
