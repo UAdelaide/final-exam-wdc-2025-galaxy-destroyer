@@ -35,7 +35,7 @@ a {
 }
 
 #car {
-  width:170px; height: 100px;
+  width:100px; height: 100px;
   gap:1rem;
   position:absolute;
   top: 0; left: 50;
