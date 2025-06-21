@@ -10,8 +10,9 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(session({
-    secret:shush,
-    
+    secret:'shush',
+    resave:false,
+    secure:false
 }));
 
 // Routes
