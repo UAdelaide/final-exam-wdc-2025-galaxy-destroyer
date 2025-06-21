@@ -2,6 +2,37 @@ var posts = [];
 var search = null;
 
 /*
+ * Loads posts from the server
+ * - Send an AJAX GET request to the server
+ * - JSON Array of posts sent in response
+ * - Update the
+ */
+function loadPosts() {
+
+    // Create AJAX Request
+    var xmlhttp = new XMLHttpRequest();
+
+    // Define function to run on response
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // Parse the JSON and update the posts array
+            posts = JSON.parse(this.responseText);
+            // Call the updatePosts function to update the page
+            updatePosts();
+        }
+    };
+
+    // Open connection to server
+    xmlhttp.open("GET", "/posts", true);
+
+    // Send request
+    xmlhttp.send();
+
+}
+
+
+
+/*
  * Hides the main part of the page to show the Ask a Question section
  */
 function showAsk(){
@@ -126,13 +157,6 @@ function updatePosts() {
 
 
 }
-
-/*
- * Loads posts from the server
- * - Send an AJAX GET request to the server
- * - JSON Array of posts sent in response
- * - Update the
- */
 
 
 
