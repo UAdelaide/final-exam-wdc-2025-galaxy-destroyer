@@ -188,7 +188,7 @@ function login(){
     };
 
     // Create AJAX Request
-    const xmlhttp = new XMLHttpRequest();
+    var xmlhttp = new XMLHttpRequest();
     xmlhttp.open("POST", "/api/users/login", true);
     xmlhttp.setRequestHeader("Content-type", "application/json");
 
@@ -198,7 +198,7 @@ function login(){
 
             const response = JSON.parse(this.responseText);
             const role = response.user.role;
-            
+
             if (role === 'owner') {
                 window.location.href = 'owner-dashboard.html';
             } else if (role === 'walker') {
