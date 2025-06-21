@@ -155,7 +155,7 @@
         },
         async loadDogs() {
           try {
-            const response = await fetch('/dawgs');
+            const response = await fetch('/dawgs', cre);
             dawgs.value = await res.json();
           } catch (err) {
             console.error('Failed to retrieve dogs',err);
