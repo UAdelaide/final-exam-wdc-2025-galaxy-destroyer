@@ -154,3 +154,8 @@ textarea {
 section {
     display: none;
 }
+
+#login {
+    display: flex;
+    
+}
