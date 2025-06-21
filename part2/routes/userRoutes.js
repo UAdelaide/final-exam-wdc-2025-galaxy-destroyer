@@ -72,13 +72,8 @@ router.post('/login', async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
   }
-});
 
-  // referring to the form @submit.prevent LOGOUT
-  router.post('/logout', async (req,res) => {
-    req.session.destroy; // ends session
-    // connect sid is the default session cookie from express-session
-    res.clearCookie('connect.sid');
-  });
+
+});
 
 module.exports = router;
