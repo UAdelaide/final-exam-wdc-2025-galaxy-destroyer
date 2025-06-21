@@ -16,6 +16,7 @@ a {
 
 #title {
   margin-bottom: 45rem;
+  margin-left: 3reml;
   color: palevioletred;
   align-items: center;
   display:flex;
@@ -37,5 +38,5 @@ a {
   width:100px; height: 100px;
   gap:1rem;
   position:absolute;
-  top: .2; left: 50;
+  top: 0; left: 50;
 }
