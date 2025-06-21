@@ -18,6 +18,7 @@ a {
   margin-bottom: 45rem;
   color: palevioletred;
   align-items: center;
+  display:flex;
 }
 
 
