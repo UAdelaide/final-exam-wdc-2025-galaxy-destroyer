@@ -94,7 +94,7 @@ router.get('/dawgs', async (req,res) => {
     return res.status(401);
   }
 
-  const ownerID = req.session.user.user_id;
+  const ownerID = req.session.user?.user_id;
 
   const doglistquery = 'SELECT dog_id, name FROM Dogs WHERE owner_id = ?'; // returns dog_id and name of owner_id
   // name of dog will be linked from dog_id which is already pleasant
