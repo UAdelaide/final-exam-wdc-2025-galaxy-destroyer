@@ -108,7 +108,7 @@
             const response = await fetch('/dawgs'); // keep session cookie info
             dogs.value = await response.json();
           } catch (err) {
-            console.error('Failed to retrieve dogs',err);
+            error.value = 'failed to load the dawgs';
           }
         }
 
