@@ -52,7 +52,7 @@ router.post('/login', async (req, res) => {
 
     var user = useSyncExternalStore[0]
     req.session.user =  {
-      
+      user_id: t
     }; // storing session
     // res.json({ message: 'Login successful', user: rows[0] });
 
