@@ -32,7 +32,7 @@
                     const response = await fetch('https://dog.ceo/api/breeds/image/random');
                     const data = await response.json();
                     this.image = data.message;
-                    alert('Click ok to see dog pics'); // adds to kinematic load
+                    alert('Click ok to see dog pics\n新しい犬!'); // adds to kinematic load
                 } catch (err) {
                     console.log('Failed to show new dog!', error);
                 }
