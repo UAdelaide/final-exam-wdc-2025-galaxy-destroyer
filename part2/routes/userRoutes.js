@@ -73,6 +73,7 @@ router.post('/login', async (req, res) => {
     res.status(500).json({ error: 'Login failed' });
   }
 
+  // referring to the form @submit.prevent LOGOUT
   router.post('/logout', async (req,res) => {
     req.session.destroy;
   });
