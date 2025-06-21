@@ -69,9 +69,9 @@
             const role = data.user.role;
 
             if (role === 'owner') {
-              location.href = 'owner-dashboard.html';
+              window.location.href = 'owner-dashboard.html';
             } else if (role === 'walker') {
-              location.href = 'walker-dashboard.html';
+              window.location.href = 'walker-dashboard.html';
             } else {
               throw(err);
             }
