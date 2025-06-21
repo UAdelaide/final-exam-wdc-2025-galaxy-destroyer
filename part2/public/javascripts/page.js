@@ -198,7 +198,11 @@ function login(){
             const response = JSON.parse(this.responseText);
             if (role === 'owner') {
                 window.location.href = 'owner-dashboard.html';
-            } else if (role === '')
+            } else if (role === 'walker') {
+                window.location.href = 'walker-dashboard.html';
+            } else {
+                alert('')
+            }
 
             alert("Welcome "+this.responseText);
         } else if (this.readyState == 4 && this.status >= 400) {
