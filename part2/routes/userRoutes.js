@@ -51,8 +51,15 @@ router.post('/login', async (req, res) => {
     }
 
     var user = useSyncExternalStore[0]
-    req.session.user =  {}; // storing session
+    req.session.user =  {
+      
+    }; // storing session
     // res.json({ message: 'Login successful', user: rows[0] });
+
+    // response object for the front end
+    res.json({
+
+    });
 
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
