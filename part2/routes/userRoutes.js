@@ -52,7 +52,8 @@ router.post('/login', async (req, res) => {
     res.sendStatus(200).json({ message: 'Login successful', user: rows[0] });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
-  }
+  }.http
+  xml
 });
 
 module.exports = router;
