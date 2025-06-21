@@ -61,13 +61,13 @@ router.post('/login', async (req, res) => {
     };
 
     // response object for the front end
-    res.json({
+    return res.json({
       user_id: this.user_id,
       username: this.username,
       email: this.email,
       password: this.password
     });
-    return res.json({ message: 'Login successful', user });
+    // return res.json({ message: 'Login successful', user });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
   }
