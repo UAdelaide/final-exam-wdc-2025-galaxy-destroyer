@@ -10,12 +10,14 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(session({
-
-}))
+    secret:shush,
+    
+}));
 
 // Routes
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
+const { setHeapSnapshotNearHeapLimit } = require('v8');
 
 app.use('/api/walks', walkRoutes);
 app.use('/api/users', userRoutes);
