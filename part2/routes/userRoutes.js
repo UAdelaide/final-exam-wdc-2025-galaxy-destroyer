@@ -57,7 +57,7 @@ router.post('/login', async (req, res) => {
       username: user.username,
       email: user.email,
       password: user.password,
-      user: user.role
+      role: user.role
     };
 
     // response object for the front end
