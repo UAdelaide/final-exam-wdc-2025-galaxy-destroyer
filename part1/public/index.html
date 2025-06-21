@@ -32,7 +32,7 @@
                     const response = await fetch('https://dog.ceo/api/breeds/image/random');
                     const data = await response.json();
                     this.image = data.message;
-                    console.alert('Omg new dog!!!');
+                    alert('Omg new dog!!!');
                 } catch (err) {
                     console.log('Failed to show new dog!', error);
                 }
