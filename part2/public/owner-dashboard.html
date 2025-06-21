@@ -91,7 +91,7 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-        const dawgs = ref([]);
+        const dogs = ref([]);
 
         async function loadWalks() {
           try {
@@ -157,7 +157,7 @@
         async loadDogs() {
           try {
             const response = await fetch('/dawgs', {credentials:include}); // keep session cookie info
-            dawgs.value = await res.json();
+            dogs.value = await res.json();
           } catch (err) {
             console.error('Failed to retrieve dogs',err);
           }
