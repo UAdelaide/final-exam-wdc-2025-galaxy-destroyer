@@ -89,7 +89,19 @@
           error,
           applyToWalk
         };
-      }
+      },
+methods: {
+      async logout() {
+        try {
+          const response = await fetch('/logout', {
+            method: 'POST'
+          });
+          window.location.href = '/index.html';
+
+        } catch (err) {
+          console.error('could not log out!', err);
+        }
+      }}
     }).mount('#app');
   </script>
 
