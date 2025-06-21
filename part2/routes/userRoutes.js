@@ -83,7 +83,7 @@ router.post('/login', async (req, res) => {
   router.get('/dogs', async (req,res) => {
     const ownerId = req.session.user_id;
 
-    const doglistquery = '';
+    const doglistquery = 'SELECT dog_id, name FROM Dogs WHERE owner';
 
   });
 });
