@@ -89,7 +89,6 @@ router.post('/logout', async (req,res) => {
 });
 
 router.get('/dawgs', async (req,res) => {
-  console.log('uh');
   if (!req.session.user) {
     return res.status(401);
   }
