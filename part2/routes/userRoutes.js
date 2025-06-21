@@ -79,6 +79,8 @@ router.post('/login', async (req, res) => {
     // connect sid is the default session cookie from express-session
     res.clearCookie('connect.sid');
   });
+
+  router.get('/dogs')
 });
 
 module.exports = router;
