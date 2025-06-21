@@ -19,7 +19,8 @@ app.use(session({
 }));
 
 app.use(cors({
-    origin: ''
+    origin: 'http://localhost:8080',
+    credentials: true
 }));
 
 // Routes
