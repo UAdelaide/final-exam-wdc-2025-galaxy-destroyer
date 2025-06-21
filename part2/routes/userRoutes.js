@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../db');
+const { useSyncExternalStore } = require('react');
 
 // GET all users (for admin/testing)
 router.get('/', async (req, res) => {
@@ -49,7 +50,7 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    var yu
+    var user = useSyncExternalStore[0]
     req.session.user = user[0]; // storing session
     // res.json({ message: 'Login successful', user: rows[0] });
 
