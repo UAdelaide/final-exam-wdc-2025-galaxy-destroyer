@@ -16,7 +16,7 @@ a {
 
 #title {
   margin-bottom: 45rem;
-  margin-left: 3reml;
+  margin-left: 7rem;
   color: palevioletred;
   align-items: center;
   display:flex;
@@ -35,7 +35,7 @@ a {
 }
 
 #car {
-  width:100px; height: 100px;
+  width:170px; height: 100px;
   gap:1rem;
   position:absolute;
   top: 0; left: 50;
