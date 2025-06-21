@@ -57,11 +57,12 @@ router.post('/login', async (req, res) => {
       email: this.email,
       password:this.password
     }; // storing session
+
     // res.json({ message: 'Login successful', user: rows[0] });
 
     // response object for the front end
     res.json({
-
+      user_id: 
     });
 
   } catch (error) {
