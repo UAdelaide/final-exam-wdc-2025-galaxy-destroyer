@@ -1,6 +1,7 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
 }
 
 a {
@@ -8,7 +9,7 @@ a {
 }
 
 #doggie img {
-  width: 200px;
+  width: 256px;
   border-radius: 10px;
   float: right;
 }
