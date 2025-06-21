@@ -87,9 +87,8 @@ router.post('/login', async (req, res) => {
     // name of dog will be linked from dog_id which is already pleasant
 
     db.query((doglistquery,[ownerID]) (err,doggies) => {
-      if (err) {return res.status(500);}
+      if (err) {return res.status(500);});
       res.json(doggies);
-    });
   });
 });
 
