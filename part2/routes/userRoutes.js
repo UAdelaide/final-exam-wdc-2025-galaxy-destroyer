@@ -81,12 +81,12 @@ router.post('/login', async (req, res) => {
   });
 
   router.get('/dogs', async (req,res) => {
-    const ownerId = req.session.user_id;
+    const ownerID = req.session.user_id;
 
     const doglistquery = 'SELECT dog_id, name FROM Dogs WHERE owner_id = ?'; // returns dog_id and name of owner_id
     // name of dog will be linked from dog_id which is already pleasant
 
-    db.query(sql,[owner]);
+    db.query(sql,[ownerID]);
 
   });
 });
