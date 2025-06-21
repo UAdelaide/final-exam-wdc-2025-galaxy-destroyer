@@ -50,7 +50,7 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
-    var user = useSyncExternalStore[0]
+    var user = rows[0];
     req.session.user =  {
       user_id: this.user_id,
       username: this.username,
