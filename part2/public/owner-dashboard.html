@@ -32,7 +32,7 @@
             <!--<input v-model="form.dog_id" type="number" class="form-control" required>-->
             <select v-model="form.dog_id" class="custom-select form-control">
               <option disabled value="-">-- Choose dog --</option>
-              <option v-for="dog in dogs" :key="dog.dog_id" :value=></option>
+              <option v-for="dog in dogs" :key="dog.dog_id" :value="dog.dog_id"> {{dog.name}} </option>
             </select>
           </div>
           <div class="mb-3">
