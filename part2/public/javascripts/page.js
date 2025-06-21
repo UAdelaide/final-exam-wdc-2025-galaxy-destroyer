@@ -203,8 +203,7 @@ function login(){
             } else {
                 alert('Error with user.');
             }
-
-            alert("Welcome "+this.responseText);
+//            alert("Welcome "+this.responseText);
         } else if (this.readyState == 4 && this.status >= 400) {
             alert("Login failed");
         }
