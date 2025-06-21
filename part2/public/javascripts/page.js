@@ -196,7 +196,9 @@ function login(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
 
-            
+            if (role === 'owner') {
+                
+            }
 
             alert("Welcome "+this.responseText);
         } else if (this.readyState == 4 && this.status >= 400) {
