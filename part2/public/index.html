@@ -21,10 +21,10 @@
       <div class="col-10 col-sm-8 col-md-6 col-lg-4">
         <div class="mb-3 text-start">
           <label class="form-label">Username</label>
-          <input v-model="username" type="text" class="form-control" required>
+          <input id="username" type="text" class="form-control" required>
 
           <label class="form-label mt-3" for="inputPassword5">Password</label>
-          <input type="password" v-model="password" class="form-control" aria-describedby="passwordHelpBlock" required>
+          <input type="password" id="password" class="form-control" aria-describedby="passwordHelpBlock" required>
         </div>
         <button type="submit" onclick="login()" class="btn btn-primary">Log In</button>
         <div v-if="error" class="text-danger"></div>
