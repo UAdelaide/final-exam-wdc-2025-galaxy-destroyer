@@ -25,7 +25,7 @@
         data() {
             return {
                 image: '',
-                dw: ''
+                dw:
             };
         },
         methods: {
@@ -45,8 +45,8 @@
         },
         async dontworryaboutit() {
             try {
-await alert('HAHAH dont worry about it!!!');
-
+                const response = await alert('HAHAH dont worry about it!!!');
+                const data = await response.json();
             } catch (err) {
                 console.log('oops',error);
             }
