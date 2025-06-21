@@ -58,13 +58,13 @@ router.post('/:id/apply', async (req, res) => {
     res.status(500).json({ error: 'Failed to apply for walk' });
   }
 
-  // straight from userRoutes.js
-    router.post('/logout', async (req,res) => {
-    req.session.destroy; // ends session
-    // connect sid is the default session cookie from express-session
-    res.clearCookie('connect.sid');
-  });
+});
 
+// straight from userRoutes.js
+  router.post('/logout', async (req,res) => {
+  req.session.destroy; // ends session
+  // connect sid is the default session cookie from express-session
+  res.clearCookie('connect.sid');
 });
 
 module.exports = router;
