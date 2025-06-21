@@ -41,7 +41,7 @@ router.post('/login', async (req, res) => {
 
   try {
     const [rows] = await db.query(`
-      SELECT user_id, username, role FROM Users
+      SELECT user_id, username, password_hash, role FROM Users
       WHERE username = ? AND password_hash = ?
     `, [username, password]);
 
@@ -55,6 +55,7 @@ router.post('/login', async (req, res) => {
     req.session.user =  {
       user_id: user.user_id,
       username: user.username,
+      email: user.email,
       password: user.password,
       role: user.role
     };
