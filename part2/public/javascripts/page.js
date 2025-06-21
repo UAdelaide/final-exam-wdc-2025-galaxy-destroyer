@@ -201,7 +201,7 @@ function login(){
             } else if (role === 'walker') {
                 window.location.href = 'walker-dashboard.html';
             } else {
-                alert('')
+                alert('Error with user.');
             }
 
             alert("Welcome "+this.responseText);
