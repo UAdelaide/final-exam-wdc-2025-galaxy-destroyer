@@ -61,11 +61,12 @@ router.post('/login', async (req, res) => {
     };
 
     // response object for the front end
-    return res.json({
-      user_id: this.user_id,
-      username: this.username,
-      email: this.email,
-      password: this.password
+    res.json({
+      user {
+        user_id: this.user_id,
+        username: this.username,
+        email: this.email,
+        password: this.password}
     });
     // return res.json({ message: 'Login successful', user });
   } catch (error) {
