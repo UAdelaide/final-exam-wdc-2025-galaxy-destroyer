@@ -17,6 +17,7 @@
     <!--<p class="lead">Connect with trusted walkers for your beloved dog!</p>-->
 
     <!-- used bootstrap 5 syntax + code from owner-dashboard to implement these inputs and labels -->
+     <form>
     <div class="row justify-content-center">
       <div class="col-10 col-sm-8 col-md-6 col-lg-4">
         <div class="mb-3 text-start">
@@ -26,6 +27,7 @@
           <label class="form-label mt-3" for="inputPassword5">Password</label>
           <input type="password" v-model="password" class="form-control" aria-describedby="passwordHelpBlock" required>
         </div>
+      
         <button type="submit" onclick="login()" class="btn btn-primary">Log In</button>
         <div v-if="error" class="text-danger"></div>
       </div>
