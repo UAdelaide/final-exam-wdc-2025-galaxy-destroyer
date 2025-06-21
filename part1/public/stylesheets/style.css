@@ -13,6 +13,6 @@ a {
   float: right;
 }
 
-#title {
-  
+#title h1 {
+  vertical-align: bottom;
 }
