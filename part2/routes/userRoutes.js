@@ -36,7 +36,7 @@ router.get('/me', (req, res) => {
 });
 
 // POST login (dummy version)
-router.pget('/login', async (req, res) => {
+router.get('/login', async (req, res) => {
   const { username, password } = req.body;
 
   try {
