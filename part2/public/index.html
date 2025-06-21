@@ -67,8 +67,10 @@
             // send user into relevant page
             const role = data.user.role;
 
-            if (role == owner) {
+            if (role == 'owner') {
               location.href = 'owner-dashboard.html';
+            } else if (role == walker) {
+
             }
 
 
