@@ -105,7 +105,7 @@
         }
         async function loadDogs() {
           try {
-            const response = await fetch('/api/dawgs',{ credentials: 'include' }); // keep session cookie info
+            const response = await fetch('/dawgs',{ credentials: 'include' }); // keep session cookie info
             dogs.value = await response.json();
           } catch (err) {
             error.value = 'failed to load the dawgs';
