@@ -86,11 +86,10 @@ router.post('/login', async (req, res) => {
     const doglistquery = 'SELECT dog_id, name FROM Dogs WHERE owner_id = ?'; // returns dog_id and name of owner_id
     // name of dog will be linked from dog_id which is already pleasant
 
-    db.query(sql,[ownerID]) (err,doggies) => {
+    db.query((sql,[ownerID]) (err,doggies) => {
       if (err) return res.status(500);
       res.json(doggies);
     });
-
   });
 });
 
