@@ -63,10 +63,10 @@ router.post('/:id/apply', async (req, res) => {
 // straight from userRoutes.js
   router.post('/logout', async (req,res) => {
   req.session.destroy(err => {
-    
+    res.clearCookie('connect.sid');
+    res.status(200);
   }); // ends session
   // connect sid is the default session cookie from express-session
-  res.clearCookie('connect.sid');
 });
 
 module.exports = router;
