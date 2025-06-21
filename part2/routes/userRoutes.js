@@ -89,6 +89,9 @@ router.post('/logout', async (req,res) => {
 });
 
 router.get('/dawgs', async (req,res) => {
+
+  if (!req.session.user)
+
   const ownerID = req.session.user.user_id;
 
   const doglistquery = 'SELECT dog_id, name FROM Dogs WHERE owner_id = ?'; // returns dog_id and name of owner_id
