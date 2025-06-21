@@ -50,7 +50,7 @@
       },
       methods: {
         async login() {
-          //this.error = '';
+          // this.error = '';
 
           try {
             const response = await fetch('/login',{
@@ -61,6 +61,8 @@
                 password: this.password
               })
             })
+          } catch(err) {
+            
           }
         }
       }
