@@ -62,7 +62,10 @@ router.post('/login', async (req, res) => {
 
     // response object for the front end
     res.json({
-      user_id: 
+      user_id: this.user_id,
+      username: this.username,
+      email: this.email,
+      password: this.password
     });
 
   } catch (error) {
