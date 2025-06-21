@@ -80,7 +80,9 @@ router.post('/login', async (req, res) => {
     res.clearCookie('connect.sid');
   });
 
-  router.get('/dogs')
+  router.get('/dogs', async (req,res) => {
+    
+  });
 });
 
 module.exports = router;
