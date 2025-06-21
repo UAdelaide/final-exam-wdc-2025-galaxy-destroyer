@@ -17,23 +17,24 @@
     <!--<p class="lead">Connect with trusted walkers for your beloved dog!</p>-->
 
     <!-- used bootstrap 5 syntax + code from owner-dashboard to implement these inputs and labels -->
-  <form @submit.prevent="login">
-    <div class="row justify-content-center">
-      <div class="col-10 col-sm-8 col-md-6 col-lg-4">
-        <div class="mb-3 text-start">
-          <label class="form-label">Username</label>
-          <input v-model="username" type="text" class="form-control" required>
+    <form @submit.prevent="login">
+      <div class="row justify-content-center">
+        <div class="col-10 col-sm-8 col-md-6 col-lg-4">
+          <div class="mb-3 text-start">
+            <label class="form-label">Username</label>
+            <input v-model="username" type="text" class="form-control" required>
 
-          <label class="form-label mt-3" for="inputPassword5">Password</label>
-          <input type="password" v-model="password" class="form-control" aria-describedby="passwordHelpBlock" required>
+            <label class="form-label mt-3" for="inputPassword5">Password</label>
+            <input type="password" v-model="password" class="form-control" aria-describedby="passwordHelpBlock"
+              required>
+          </div>
+          <button type="submit" class="btn btn-primary">Log In</button>
         </div>
-        <button type="submit" class="btn btn-primary">Log In</button>
-      </div>
     </form>
-</div>
+  </div>
 
 
-    <!--
+  <!--
     <a href="owner-dashboard.html" class="btn btn-outline-primary me-2">Owner Dashboard</a>
     <a href="walker-dashboard.html" class="btn btn-outline-success">Walker Dashboard</a>
     -->
@@ -45,9 +46,9 @@
       data() {
         return {
           message: 'Welcome to the Dog Walking Service!',
-          username:'',
-          password:'',
-          error:''
+          username: '',
+          password: '',
+          error: ''
         };
       },
       methods: {
@@ -55,9 +56,9 @@
           this.error = '';
 
           try {
-            const response = await fetch('/api/users/login',{
+            const response = await fetch('/api/users/login', {
               method: 'POST',
-              headers: {'Content-Type': 'application/json' },
+              headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
                 username: this.username,
                 password: this.password
@@ -74,10 +75,10 @@
             } else if (role === 'walker') {
               window.location.href = 'walker-dashboard.html';
             } else {
-              throw(err);
+              throw (err);
             }
 
-          } catch(err) {
+          } catch (err) {
             console.error('Could not login!');
           }
         }
