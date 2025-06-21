@@ -46,6 +46,8 @@
             try {
                 const response = await alert('HAHAH dont worry about it!!!');
                 const data = await response.json();
+            } catch (err) {
+                console.log('oops',error);
             }
         }
     }).mount('#app');
