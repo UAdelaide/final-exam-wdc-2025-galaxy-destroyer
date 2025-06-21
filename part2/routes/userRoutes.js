@@ -90,7 +90,9 @@ router.post('/logout', async (req,res) => {
 
 router.get('/dawgs', async (req,res) => {
 
-  if (!req.session.user)
+  if (!req.session.user) {
+    return res.status(401);
+  }
 
   const ownerID = req.session.user.user_id;
 
