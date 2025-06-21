@@ -2,6 +2,63 @@ var posts = [];
 var search = null;
 
 /*
+ * Reloads the posts shown on the page
+ * Iterates over the array of post objects, rendering HTML for each and appending it to the page
+ * If a search term is being used
+ */
+function updatePosts() {
+
+    // Reset the page
+    document.getElementById('post-list').innerHTML = '';
+
+    // Iterate over each post in the array by index
+    for(let i=0; i<posts.length; i++){
+
+        let post = posts[i];
+
+        // Check if a search term used.
+        if(search !== null){
+            // If so, skip this question/post if title or content doesn't match
+            if (post.title.toUpperCase().indexOf(search) < 0 &&
+                post.content.toUpperCase().indexOf(search) < 0 ) {
+                continue;
+            }
+        }
+
+        // Generate a set of spans for each of the tags
+        let tagSpans = '';
+        for(let tag of post.tags){
+            tagSpans = tagSpans + `<span class="tag">${tag}</span>`;
+        }
+
+        // Generate the post/question element and populate its inner HTML
+        let postDiv = document.createElement("DIV");
+        postDiv.classList.add("post");
+
+        postDiv.innerHTML = `
+            <div class="votes">
+                <button onclick="upvote(${i})">+</button>
+                <p><span class="count">${post.upvotes}</span><br />votes</p>
+                <button onclick="downvote(${i})">-</button>
+            </div>
+            <div class="content">
+                <h3><a href="#">${post.title}</a></h3>
+                <i>By ${post.author}</i>
+                <p>${post.content}</p>
+                ${tagSpans}<span class="date">${new Date(post.timestamp).toLocaleString()}</span>
+            </div>
+        `;
+
+        // Append the question/post to the page
+        document.getElementById("post-list").appendChild(postDiv);
+
+    }
+
+
+}
+
+
+/*
  * Loads posts from the server
  * - Send an AJAX GET request to the server
  * - JSON Array of posts sent in response
@@ -102,61 +159,7 @@ function searchPosts(){
 }
 
 
-/*
- * Reloads the posts shown on the page
- * Iterates over the array of post objects, rendering HTML for each and appending it to the page
- * If a search term is being used
- */
-function updatePosts() {
 
-    // Reset the page
-    document.getElementById('post-list').innerHTML = '';
-
-    // Iterate over each post in the array by index
-    for(let i=0; i<posts.length; i++){
-
-        let post = posts[i];
-
-        // Check if a search term used.
-        if(search !== null){
-            // If so, skip this question/post if title or content doesn't match
-            if (post.title.toUpperCase().indexOf(search) < 0 &&
-                post.content.toUpperCase().indexOf(search) < 0 ) {
-                continue;
-            }
-        }
-
-        // Generate a set of spans for each of the tags
-        let tagSpans = '';
-        for(let tag of post.tags){
-            tagSpans = tagSpans + `<span class="tag">${tag}</span>`;
-        }
-
-        // Generate the post/question element and populate its inner HTML
-        let postDiv = document.createElement("DIV");
-        postDiv.classList.add("post");
-
-        postDiv.innerHTML = `
-            <div class="votes">
-                <button onclick="upvote(${i})">+</button>
-                <p><span class="count">${post.upvotes}</span><br />votes</p>
-                <button onclick="downvote(${i})">-</button>
-            </div>
-            <div class="content">
-                <h3><a href="#">${post.title}</a></h3>
-                <i>By ${post.author}</i>
-                <p>${post.content}</p>
-                ${tagSpans}<span class="date">${new Date(post.timestamp).toLocaleString()}</span>
-            </div>
-        `;
-
-        // Append the question/post to the page
-        document.getElementById("post-list").appendChild(postDiv);
-
-    }
-
-
-}
 
 
 
