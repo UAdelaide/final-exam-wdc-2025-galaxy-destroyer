@@ -158,7 +158,7 @@
         },
         async loadDogs() {
           try {
-            const response = await fetch('/dawgs', {credentials:include}); // keep session cookie info
+            const response = await fetch('/dawgs', { credentials:'include' }); // keep session cookie info
             dogs.value = await res.json();
           } catch (err) {
             console.error('Failed to retrieve dogs',err);
