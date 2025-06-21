@@ -183,7 +183,9 @@ function login(){
 
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
-
+    xmlhttp.open("POST", "/users/login", true);
+    xmlhttp.setRequestHeader("Content-type", "application/json");
+    
     // Define function to run on response
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
