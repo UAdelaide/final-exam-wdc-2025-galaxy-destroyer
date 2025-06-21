@@ -189,7 +189,7 @@ function login(){
 
     // Create AJAX Request
     const xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POST", "/users/login", true);
+    xmlhttp.open("POST", "/api/users/login", true);
     xmlhttp.setRequestHeader("Content-type", "application/json");
 
     // Define function to run on response
