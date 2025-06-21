@@ -195,13 +195,9 @@ function login(){
     // Define function to run on response
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            const response = JSON.parse(this.responseText);
+            const response  
             if (role === 'owner') {
-                window.location.href = 'owner-dashboard.html';
-            } else if (role === 'walker') {
-                window.location.href = 'walker-dashboard.html';
-            } else {
-                alert()
+
             }
 
             alert("Welcome "+this.responseText);
