@@ -158,7 +158,7 @@
             const response = await fetch('/dawgs');
             dawgs.value = await res.json();
           } catch (err) {
-            
+            console.error('Failed to retrieve dogs',err);
           }
         }
       }
