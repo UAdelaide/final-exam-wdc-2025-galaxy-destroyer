@@ -164,5 +164,5 @@ section {
 #logoutbutton {
     position:absolute;
     float: right;
-    align-items: ;
+    align-items: end;
 }
