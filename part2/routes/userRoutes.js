@@ -92,6 +92,7 @@ router.get('/dogs', async (req,res) => {
   db.query(doglistquery,[ownerID], (err,doggies) => {
     if (err) {return res.status(500);}
     res.json(doggies);
+  });
 });
 
 module.exports = router;
